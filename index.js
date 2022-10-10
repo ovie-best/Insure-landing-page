@@ -7,13 +7,13 @@ const mobileMenu = document.querySelector('.mobile-menu');
 function showMenu() {
     hambuger.style.display = 'none';
     closeButton.style.display = 'block';
-    mobileMenu.style.top = '80px';
+    mobileMenu.style.right = '0';
 }
 
 function hideMenu() {
     closeButton.style.display = 'none';
     hambuger.style.display = 'block';
-    mobileMenu.style.top = '-100%';
+    mobileMenu.style.right = '-100%';
 }
 
 hambuger.addEventListener('click', showMenu);
