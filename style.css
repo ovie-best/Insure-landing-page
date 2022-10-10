@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+:root {
+    --Dark-Violet: hsl(256, 26%, 20%);
+    --Grayish-Blue: hsl(216, 30%, 68%);
+    --Very-Dark-Violet: hsl(270, 9%, 17%);
+    --Dark-Grayish-Violet: hsl(273, 4%, 51%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-size: 100%;
+}
+ 
+html, body {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+/*I dont want to use this for this particular project, that's why it's commented out*/
+/* p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    hyphens: auto;
+} */
+
+/*this should be used only when working with a javascript framework like REACT or Next.Js*/
+/* #root, #__next {
+    isolation: isolate;
+} */
+
+
+
+/*My styling starts here*/
+ /*//////////////////////////////// GENERAL STYLES ///////////////////////////////////////*/
+body {
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #fff;
+    scroll-behavior: smooth;
+    font-family: 'Karla', sans-serif;;
+}
+
+h1, h2, h3 {
+   font-family: 'DM Serif Display', serif;
+}
+
+.wrapper {
+    width: 77%;
+    margin: 0 auto;
+}
+
+a {
+   text-decoration: none;
+   color: var(--Dark-Grayish-Violet);
+   text-transform: uppercase;
+   font-family: sans-serif;
+   transition: all 0.4s ease-in-out;
+}
+
+p {
+   font-family: sans-serif;
+ }
+
+
+ /*//////////////////////////////// HEADER SECTION ///////////////////////////////////////*/
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a:hover {
+   color: var(--Very-Dark-Violet);
+}
+ header nav ul li:last-of-type a {
+    border: 2px solid var(--Very-Dark-Violet);
+    padding: 15px 30px;
+ }
+
+ header nav ul li:last-of-type a:hover {
+   background-color: var(--Very-Dark-Violet);
+   color: var(--Very-Light-Gray);
+ }
+
+ .hambuger, .close-menu {
+   display: none;
+   cursor: pointer;
+ }
+
+ .mobile-menu {
+   display: none;
+ }
+
+  /*//////////////////////////////// MAIN SECTION ///////////////////////////////////////*/
+ main {
+    background-color: var(--Dark-Violet);
+    background-clip: border-box;
+    position: relative;
+ }
+
+ h1 {
+    font-size: 4rem;
+    line-height: 1;
+ }
+
+ main .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: var(--Very-Light-Gray);
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 8.6rem;
+ }
+
+ main .wrapper a {
+    color: var(--Very-Light-Gray);
+    border: 2px solid var(--Very-Light-Gray);
+    padding: 15px 30px;
+ }
+
+ main .wrapper a:hover {
+   background-color: var(--Very-Light-Gray);
+   color: var(--Very-Dark-Violet);
+ }
+
+ article hr, .different hr {
+    width: 30%;
+    margin-bottom: 70px;
+ }
+
+ main p {
+   padding: 20px 30px 36px 0;
+}
+
+ .intro-pattern-right {
+   overflow: hidden;
+   height: 100%;
+   width: 50%;
+   position: absolute;
+   top: 0;
+   right: 0;
+ }
+
+ .hero-img {
+   position: relative;
+ }
+
+ .hero-img img {
+   position: absolute;
+ }
+
+ .hero-pattern:first-of-type {
+    top: -80px;
+    right: 0;
+    position: absolute;
+ }
+
+ .left-hero-pattern {
+   position: absolute;
+   top: 30.8rem;
+   left: 0;
+ }
+
+ img[alt="intro-image-mobile"] {
+   display: none;
+ }
+
+  /*//////////////////////////////// WE'RE DIFFERENT SECTION ///////////////////////////////////////*/
+
+ .different .wrapper {
+    padding-top: 20rem;
+    position: relative;
+ }
+
+ .different h1, .different h2 {
+    color: var(--Very-Dark-Violet);
+ }
+
+ .different h3 {
+    font-size: 2rem;
+    margin-bottom: 1.9rem;
+ }
+ .different hr, .different p {
+    color: var(--Dark-Grayish-Violet);
+ }
+
+ .different hr {
+   width: 10rem;
+   height: 2px;
+   background-color: var(--Dark-Grayish-Violet);
+ }
+
+ .different section {
+    display: flex;
+    margin-top: 6.25rem;
+    gap: 25px;
+ }
+
+ .different section article img {
+    margin-bottom: 2.5rem;
+ }
+
+  /*//////////////////////////////// FIND OUT MORE SECTION ///////////////////////////////////////*/
+
+ .more {
+    width: 77%;
+    margin: 0 auto;
+    background-color: var(--Dark-Violet);
+    color: var(--Very-Light-Gray);
+    margin-top: 10rem;
+    margin-bottom: 9.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4.8rem;
+    height: 250px;
+    background-image: url(./images/bg-pattern-how-we-work-desktop.svg);
+    background-position:  top right;
+    background-repeat: no-repeat;
+ }
+
+ .more h2 {
+    font-size: 3rem;
+    line-height: 1;
+ }
+
+ .more a {
+    border: 2px solid var(--Very-Light-Gray);
+    padding: 13px 23px;
+    font-weight: 700;
+    color: var(--Very-Light-Gray);
+    font-size: .9rem;
+ }
+
+ .more a:hover {
+   background-color: var(--Very-Light-Gray);
+   color: var(--Very-Dark-Violet);
+ }
+
+ .hero-mobile-right-pattern {
+   display: none;
+ }
+
+ /*//////////////////////////////// FOOTER SECTION ///////////////////////////////////////*/
+
+ footer {
+    background-color: var(--Very-Light-Gray);
+    padding: 4rem 0;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: .9rem;
+    background-image: url(./images/bg-pattern-footer-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+ }
+
+ .footer-wrapper {
+    width: 77%;
+    margin: 0 auto;
+ }
+
+ .footer-head {
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .useful-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+ }
+
+ .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+ }
+
+ footer hr {
+    margin: 2rem 0 3rem 0;
+    color: var(--Dark-Grayish-Violet);
+ }
+
+ footer h4 {
+    text-transform: uppercase;
+    color: var(--Dark-Grayish-Violet);
+    margin-bottom: 2.5rem;
+ }
+
+ footer a {
+    color: var(--Dark-Violet);
+ }
+
+ footer a:hover {
+    text-decoration: underline;
+ }
+
+ footer ul li {
+    line-height: 2.5;
+ }
+
+
+ /*//////////////////////////////// MEDIA QUERIES ///////////////////////////////////////*/
+ @media screen and (max-width: 1225px) {
+   .wrapper, .more, .footer-wrapper {
+      width: 88%;
+   }
+ }
+
+ @media screen and (max-width: 1000px) {
+   h1 {
+      font-size: 3.5rem;
+   }
+
+   .more h2 {
+      font-size: 2.5rem;
+   }
+
+   .intro-pattern-right img {
+      width: 80%;
+   }
+
+   .left-hero-pattern {
+      top: 33rem;
+   }
+ }
+
+ @media screen and (max-width: 900px) {
+
+   .wrapper, .more, .footer-wrapper {
+      width: 70%;
+   }
+
+   main .wrapper {
+      padding-top: 0;
+   }
+
+   main p {
+      padding: 20px 0px 36px 0;
+   }
+
+   main article {
+      padding-left: 28px;
+      padding-right: 28px;
+   }
+
+   header {
+      padding: 0 22px;
+   }
+
+   .hambuger {
+      display: block;
+    }
+
+    nav {
+      display: none;
+    }
+
+    .hero-pattern, .left-hero-pattern, hr {
+      display: none;
+    }
+
+    main {
+      background-color: transparent;
+    }
+
+    footer hr, .different hr {
+      display: block;
+    }
+
+    footer {
+      padding-right: 22px;
+      padding-left: 22px;
+    }
+   
+    .different {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+
+    .different hr {
+      margin: 0 auto;
+      margin-bottom: 2.8rem;
+    }
+
+  
+    .hero-img {
+      display: flex;
+      justify-content: center;
+    }
+
+    main article {
+      text-align: center;
+      padding-top: 6.4rem;
+      padding-bottom: 5.8rem;
+      background-color: var(--Dark-Violet);
+      background-image: url(./images/bg-pattern-intro-left-mobile.svg);
+      background-position: top left;
+      background-repeat: no-repeat;
+    }
+   
+    .hero-img img {
+      position: relative;
+      min-width: 100%;
+    }
+
+    main .wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+   }
+
+   .different .wrapper {
+      padding-top: 10px;
+      text-align: center;
+   }
+
+   .different section {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .different section article img {
+      margin: 0 auto;
+      margin-bottom: 30px;
+   }
+
+   .more {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      height: 22rem;
+      padding: 0 45px;
+      gap: 45px;
+      background-image: url(./images/bg-pattern-how-we-work-mobile.svg);
+   }
+
+    footer {
+      background-image: url(./images/bg-pattern-footer-mobile.svg);
+    }
+
+   .footer-head, .useful-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+   }
+
+   .useful-links div {
+      margin-bottom: 2.8rem;
+   }
+
+   .footer-head .logo {
+      margin-bottom: 30px;
+   }
+   
+   .mobile-menu {
+      display: block;
+      background-color: var(--Very-Dark-Violet);
+      height: 100vh;
+      width: 100%;
+      position: absolute;
+      background-image: url(./images/bg-pattern-mobile-nav.svg);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: 100%;
+      z-index: 2;
+      top: -100%;
+      transition: all 0.5s ease;
+    }
+
+    .mobile-menu nav {
+      display: block;
+      margin-top: 4.5rem;
+    }
+
+    .mobile-menu nav ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mobile-menu nav ul a {
+      color: #fff;
+    }
+
+    .mobile-menu nav ul a:hover {
+      color: var(--Very-Light-Gray);
+      opacity: 0.7;
+    }
+
+    .mobile-menu nav ul .plan {
+      border: 2px solid #fff;
+      padding: 20px;
+      width: 80%;
+      text-align: center;
+    }
+
+    .mobile-menu nav ul .plan:hover {
+      border: 2px solid rgba(223, 219, 219, .7);
+
+    }
+ }
+ 
+@media screen and (max-width: 700px) {
+   .wrapper, .footer-wrapper {
+      width: 100%;
+   } 
+
+   .more {
+      width: 90%;
+   } 
+
+   .different {
+      position: relative;
+    }
+
+    .hero-mobile-right-pattern {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: -18rem;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+   h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    br {
+      display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+   img[alt="intro-image-mobile"] {
+      display: block;
+    }
+
+    img[alt="intro-image"] {
+      display: none;
+    }
+}
